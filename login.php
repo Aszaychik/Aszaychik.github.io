@@ -1,7 +1,7 @@
 <?php 
 if( isset($_POST["submit"]) ){
     if( $_POST["username"] == "aszaychik" && $_POST["password"] == "890890" ) {
-        header("Location: home.html");
+        header("Location: index.html");
         exit;
     }else{
         $error = true;
