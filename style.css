@@ -163,8 +163,6 @@ hr {
 #contact {
   background-color: grey;
 }
-form {
-}
 #circle-formula .input {
   background-color: gray;
 }
@@ -176,7 +174,7 @@ form {
   width: 150px;
 }
 #circle-formula .result {
-  background-color: darkgray;
+  background-color: gray;
 }
 #circle-formula .result div {
   margin-left: auto;

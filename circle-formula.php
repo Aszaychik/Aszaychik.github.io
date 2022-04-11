@@ -56,46 +56,44 @@
     <!-- Jumbotron -->
     <!-- Input -->
     <section class="input">
-      <h2 class="text-center mb-3">Input</h2>
-      <hr />
-
-      <div class="mt-3">
-        <div class="input-group mb-3 w-25">
-          <span class="input-group-text label-input">Radius (R)</span>
-          <input type="text" class="form-control" id="radius" aria-label="" />
-        </div>
-        <div class="input-group mb-3 w-25">
-          <span class="input-group-text label-input">Diameter (D)</span>
-          <input type="text" class="form-control" id="diameter" aria-label="" />
-        </div>
-        <div class="input-group mb-3 w-25">
-          <span class="input-group-text label-input">Circumference (C)</span>
-          <input type="text" class="form-control" id="circumference" aria-label="" />
-        </div>
-        <div class="input-group mb-3 w-25">
-          <span class="input-group-text label-input">Area (A)</span>
-          <input type="text" class="form-control" id="area" aria-label="" />
-        </div>
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-landing">Clear</a>
-          <a href="" class="btn btn-dark btn-landing">Calculate</a>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="darkgrey"
-          fill-opacity="1"
-          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          data-darkreader-inline-fill=""
-          style="--darkreader-inline-fill: #007acc"
-        ></path>
-      </svg>
+      <h2 class="text-center">Input</h2>
+      <hr class="mb-5" />
+      <form method="post" class="text-center">
+      <table border="0" class="m-auto">
+      <tr>
+      <td class="input-group mb-3">
+        <label for="radius" class="input-group-text form-control bg-dark text-light">Radius (R)</label>
+        <input type="number" name="radius" id="radius" value="0" class="form-control w-50 bg-dark text-light" placeholder="Enter the radius of a circle"/>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <input type="submit" name="clear" class="btn-dark btn-landing"value="clear">
+        <input type="submit" name="calculate" class="btn-dark btn-landing"value="calculate"/>
+      </td>
+      </tr>
+      </table>
+      </form>
     </section>
     <!-- Input -->
     <!-- Result -->
     <section class="result">
       <div>
         <h2 class="text-center">Result :</h2>
+        <hr class="mb-5" />
+        <div class="w-100 m-auto text-center lead">
+          <?php
+          if(isset($_POST["calculate"])):
+              $radius = $_POST['radius'];
+              $pi = 3.14;
+              $circle_area = $pi * ($radius * $radius);
+              $circumference = 2 * $pi  * $radius; 
+                echo "AREA OF CIRCLE =  $circle_area";
+                echo "<br><br>";
+                echo "CIRCUMFERENCE OF CIRCLE = $circumference";
+                echo "<br><br>";
+          endif;
+          ?>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
