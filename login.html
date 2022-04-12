@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>FORM</title>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" href="old-style.css" />
+    <video class="background-video" autoplay loop muted poster="src/Vanilla & Cocoa [Nekopara].webm">
+      <source src="src/Vanilla & Cocoa [Nekopara].webm" type="video/webm" />
+    </video>
+  </head>
+
+  <body>
+    <div class="container-login">
+      <h1>LOGIN</h1>
+      <div class="form-login">
+        <form>
+          <table class="table-login" border="1">
+            <tr>
+              <td><label for="username">USERNAME</label></td>
+              <td><input type="text" id="username" /></td>
+            </tr>
+            <tr>
+              <td><label for="password">PASWORD</label></td>
+              <td><input type="text" id="password" /></td>
+            </tr>
+            <tr>
+              <td>GENDER</td>
+              <td><input type="radio" id="male" name="gender" /><label>MALE</label> <input type="radio" id="female" name="gender" /><label>FEMALE</label></td>
+            </tr>
+            <tr>
+              <td>HOBBIES</td>
+              <td>
+                <input type="checkbox" id="watching" name="HOBBIES" /><label>WATCHING</label> <input type="checkbox" id="reading" name="HOBBIES" /><label>READING</label> <input type="checkbox" id="writing" name="HOBBIES" /><label
+                  >WRITING</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label>AGE</label></td>
+              <td>
+                <select>
+                  <option>TEEN</option>
+                  <option>ADULT</option>
+                  <option>ELDER</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>MESSAGE</td>
+              <td><textarea></textarea></td>
+            </tr>
+            <tr>
+              <td align="center" colspan="2"><button>LOGIN</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

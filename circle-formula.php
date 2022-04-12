@@ -26,10 +26,10 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">-</a>
+              <a class="nav-link" href="characters.php">Characters</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="characters.php">Characters</a>
+              <a class="nav-link" href="profile.html">OLD WEBSITE</a>
             </li>
             <li class="nav-item">
               <a class="active btn btn-dark btn-landing" href="login.php">Login</a>

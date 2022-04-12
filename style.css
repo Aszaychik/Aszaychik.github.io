@@ -5,6 +5,7 @@
   #home .navbar-brand,
   #home .nav-link {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    color: black;
   }
   .nav-link:hover::after {
     content: "";
@@ -32,6 +33,14 @@
   #home .content {
     text-align: center;
   }
+}
+@media (max-width: 768px) {
+  #login .container {
+    width: 50vw;
+  }
+}
+#login {
+  background-color: darkgray;
 }
 #home {
   background-color: gray;
@@ -72,8 +81,9 @@
 }
 #home .jumbotron h2 {
   margin-top: 200px;
-  color: white;
+  color: black;
   font-weight: 500;
+  font-weight: bold;
 }
 #home .jumbotron::after {
   content: "";
@@ -119,10 +129,11 @@
   font-size: 16px;
   font-weight: bold;
   margin-top: 5px;
+  font-weight: bold;
 }
 .info-panel p {
   font-size: 14px;
-  color: rgb(100, 100, 100);
+  color: black;
   font-weight: 200;
 }
 #home .content {
@@ -133,14 +144,15 @@
   height: 400px;
 }
 #home .content h3 {
-  color: white;
+  color: black;
   font-size: 52px;
   font-weight: 200;
+  font-weight: bold;
   margin-top: 30px;
 }
 #home .content p {
   font-size: 18px;
-  color: darkgray;
+  color: black;
   margin-top: 25px;
   margin-bottom: 25px;
 }
