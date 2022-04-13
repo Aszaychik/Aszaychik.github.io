@@ -113,7 +113,7 @@
   background-image: url(src/01.jpg);
   height: 640px;
   margin-top: -75px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.75);
   text-align: center;
   position: relative;
 }
@@ -217,20 +217,20 @@ hr {
 #contact {
   background-color: grey;
 }
-#circle-formula .input {
+#formula .input {
   background-color: gray;
 }
-#circle-formula .input div {
+#formula .input div {
   margin-left: auto;
   margin-right: auto;
 }
-#circle-formula .label-input {
+#formula .label-input {
   width: 150px;
 }
-#circle-formula .result {
+#formula .result {
   background-color: gray;
 }
-#circle-formula .result div {
+#formula .result div {
   margin-left: auto;
   margin-right: auto;
 }

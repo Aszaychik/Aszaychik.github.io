@@ -10,7 +10,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- MY CSS -->
-    <title>CIRCLE FORMULA</title>
+    <title>TRIANGLE FORMULA</title>
   </head>
   <body id="formula">
     <!-- Navbar -->
@@ -42,7 +42,7 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
       <img src="src/luis-eusebio-5SUt9q8jQrQ-unsplash.jpg" class="rounded-circle img-thumbnail mt-5 mb-3" width="200" />
-      <h1>Welcome To The Circle Formula</h1>
+      <h1>Welcome To The Triangle Formula</h1>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="grey"
@@ -62,8 +62,12 @@
       <table border="0" class="m-auto">
       <tr>
       <td class="input-group mb-3">
-        <label for="radius" class="input-group-text form-control bg-dark text-light">Radius (r)</label>
-        <input type="number" name="radius" id="radius" value="0" class="form-control w-50 bg-dark text-light" placeholder="Enter the radius of a circle"/>
+        <label for="base" class="input-group-text form-control bg-dark text-light">Base (b)</label>
+        <input type="number" name="base" id="base" value="0" class="form-control w-50 bg-dark text-light" placeholder="Enter the radius of a circle"/>
+      </td>
+      <td class="input-group mb-3">
+        <label for="height" class="input-group-text form-control bg-dark text-light">Height (h)</label>
+        <input type="number" name="height" id="height" value="0" class="form-control w-50 bg-dark text-light" placeholder="Enter the radius of a circle"/>
       </td>
       </tr>
       <tr>
@@ -84,14 +88,10 @@
         <div class="w-100 m-auto text-center lead">
           <?php
           if(isset($_POST["calculate"])):
-              $radius = $_POST['radius'];
-              $pi = 3.14;
-              $circle_area = $pi * ($radius * $radius);
-              $circumference = 2 * $pi  * $radius; 
-                echo "AREA OF CIRCLE =  $circle_area";
-                echo "<br><br>";
-                echo "CIRCUMFERENCE OF CIRCLE = $circumference";
-                echo "<br><br>";
+            $base = $_POST["base"];
+            $height = $_POST["height"];
+            $triangle_area = ($base * $height) / 2;
+            echo "AREA OF TRIANGLE = $triangle_area";
           endif;
           ?>
       </div>
