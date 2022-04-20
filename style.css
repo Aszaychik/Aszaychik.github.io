@@ -39,6 +39,9 @@
     width: 75%;
   }
 }
+footer {
+  max-height: max-content !important;
+}
 #login {
   min-height: 100%;
   background-image: url(src/01.jpg);
