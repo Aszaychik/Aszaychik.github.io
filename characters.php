@@ -67,9 +67,9 @@ $waifu_list = query("SELECT * FROM waifu");
           <tr class="">
               <td><?= $i; ?></td>
               <td>
-                  <a href=""><button class="btn btn-dark btn-landing">update</button></a>
+                  <a href=""><button class="btn btn-dark btn-landing">Update</button></a>
                   |
-                  <a href=""><button class="btn btn-dark btn-landing">delete</button></a>
+                  <a href="delete-characters.php?id=<?= $row["id"];?>" onclick="return confirm('Are you sure ?');"><button class="btn btn-dark btn-landing">Delete</button></a>
               </td>
         
               <td><img src="src/<?= $row["w_pict"]; ?>" width="50" class="character-pict rounded-circle"></td>
@@ -85,6 +85,7 @@ $waifu_list = query("SELECT * FROM waifu");
           <?php $i++; ?>
               <?php endforeach; ?>
             </table>
+            <a href="insert-characters.php"><button class="btn btn-dark btn-landing">Insert Character</button></a>
       </div>
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path

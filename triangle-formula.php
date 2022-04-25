@@ -12,7 +12,7 @@
     <!-- MY CSS -->
     <title>TRIANGLE FORMULA</title>
   </head>
-  <body id="formula">
+  <body id="formula" class="bg-dark">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
       <div class="container-fluid">
