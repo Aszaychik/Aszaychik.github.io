@@ -1,7 +1,8 @@
 <?php 
 
 require 'functions.php';
-$anime_list = query("SELECT * FROM anime LIMIT 50");
+$anime_list = query("SELECT * FROM anime LIMIT 100");
+
 ?>
 
 <!DOCTYPE html>
@@ -51,30 +52,28 @@ $anime_list = query("SELECT * FROM anime LIMIT 50");
       <div class="table-responsive">
         <table cellspacing="" cellpadding="" class="mt-5 mb-5 characters-table">
         
-          <tr class="bg-dark text-light">
-              <th>No.</th>
-              <th>Name</th>
-              <th>Genres</th>
-              <th>Studios</th>
-              <th>Rating</th>
-              <th>Score</th>
-              <th>Members</th>
-          </tr>
-          <?php $i = 1 ;?>
-          <?php foreach ($anime_list as $row): ?>
-          <tr class="">
-              <td><?= $i; ?></td>
-              <td><?= $row["Name"]; ?></td>
-              <td><?= $row["Genres"]; ?></td>
-              <td><?= $row["Studios"]; ?></td>
-              <td><?= $row["Rating"]; ?></td>
-              <td><?= $row["Score"] ;?></td>
-              <td><?= $row["Members"] ;?></td>
-              </tr>
-          <?php $i++; ?>
-              <?php endforeach; ?>
-            </table>
-            <a href="anime-list-all.php"><button type="submit" class="btn btn-dark btn-landing" method="POST" name="submit" value="">Show All</button></a>
+        <tr class="bg-dark text-light">
+            <th>No.</th>
+            <th>Name</th>
+            <th>Popularity</th>
+            <th>Members</th>
+            <th>Dropped</th>
+            <th>Score</th>
+        </tr>
+        <?php $i = 1 ;?>
+        <?php foreach ($anime_list as $row): ?>
+        <tr class="">
+            <td><?= $i; ?></td>
+            <td><?= $row["Name"]; ?></td>
+            <td><?= $row["Popularity"]; ?></td>
+            <td><?= $row["Members"]; ?></td>
+            <td><?= $row["Dropped"] ;?></td>
+            <td><?= $row["Score"] ;?></td>
+            </tr>
+        <?php $i++; ?>
+            <?php endforeach; ?>
+          </table>  
+          <a href="anime-fuzzy.php"><button type="submit" class="btn btn-dark btn-landing" method="POST" name="submit" value="">Show Fuzzy</button></a>
       </div>
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path

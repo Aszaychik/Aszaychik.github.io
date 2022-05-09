@@ -59,6 +59,7 @@ $anime_list = query("SELECT * FROM anime");
               <th>Studios</th>
               <th>Rating</th>
               <th>Score</th>
+              <th>Members</th>
           </tr>
           <?php $i = 1 ;?>
           <?php foreach ($anime_list as $row): ?>
@@ -69,6 +70,7 @@ $anime_list = query("SELECT * FROM anime");
               <td><?= $row["Studios"]; ?></td>
               <td><?= $row["Rating"]; ?></td>
               <td><?= $row["Score"] ;?></td>
+              <td><?= $row["Members"] ;?></td>
               </tr>
           <?php $i++; ?>
               <?php endforeach; ?>
